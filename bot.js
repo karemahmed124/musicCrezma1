@@ -1,19 +1,16 @@
-const Discord = require('discord.js');
-const { Client, Util } = require('discord.js');
+const Discord = require("discord.js");
 const client = new Discord.Client();
-const { PREFIX, GOOGLE_API_KEY } = require('./config');
-const prefix = 'ca'
-const YouTube = require('simple-youtube-api');
-const ytdl = require('ytdl-core');
-const youtube = new YouTube(GOOGLE_API_KEY);
-const queue = new Map();
-const moment = require('moment');
-const fs = require("fs");
-const coolDown = new Set();
-const Canvas = require('canvas');
-const db = require('quick.db')
-const ms = require('ms')
-const bot = new Discord.Client();
+var prefix = "-";
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : EX Clan`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`ℛ𝒩 System [-]`,"http://twitch.tv/Death Shop")
+client.user.setStatus("dnd")
+});
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
